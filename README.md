@@ -3,7 +3,7 @@
 
 # Weed-Detection
   
-The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the ```[Problematic-Areas-Detection](https://github.com/CoFly-Project/Problematic-Areas-Detection)``` module.
+The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the [```Problematic-Areas-Detection```](https://github.com/CoFly-Project/Problematic-Areas-Detection) module.
   
   
   
