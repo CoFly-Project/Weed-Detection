@@ -3,10 +3,10 @@
 
 # Weed-Detection
 
-  The main objective of this mission is to 781
+<!--   The main objective of this mission is to 781
 provide a more thorough inspection on these individual spots 782
 of the examined area that seem to be problematic in terms of 783
-plant health and provide valuable information to the end-user.
+plant health and provide valuable information to the end-user. -->
   
 The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the ```[Problematic-Areas-Detection](https://github.com/CoFly-Project/Problematic-Areas-Detection)``` module.
   
