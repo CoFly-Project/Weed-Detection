@@ -11,16 +11,8 @@ from tensorflow import keras
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
-def winapi_path(dos_path, encoding=None):
-	if (not isinstance(dos_path, str) and encoding is not None): 
-		dos_path = dos_path.decode(encoding)
-	path = os.path.abspath(dos_path)
-	if path.startswith(u"\\\\"):
-		return u"\\\\?\\UNC\\" + path[2:]
-	return u"\\\\?\\" + path
-
-images = winapi_path(sys.argv[1])
-save_dir = winapi_path(sys.argv[2])
+images = sys.argv[1]
+save_dir = sys.argv[2]
 results_dir = os.path.join(save_dir, 'results')
 os.makedirs(results_dir, exist_ok=True)
 sm.set_framework('tf.keras')
@@ -63,7 +55,6 @@ preprocess_input = sm.get_preprocessing(BACKBONE)
 model = sm.Unet(BACKBONE, classes=len(classes), activation=activation)
 model.load_weights('./weights0300.hdf5')
 
-os.chdir(results_dir)
 times = []
 for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_shapes)):
 	pred_img_input = np.expand_dims(pred_img, 0)
@@ -90,7 +81,7 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	ax.set_axis_off()
 	f.add_axes(ax)
 	ax.imshow(result_reshaped)
-	f.savefig('ID_{}.png'.format(i))
+	f.savefig('{}/ID_{}.png'.format(results_dir, i))
 	plt.close()
 
 	f = plt.figure()
@@ -100,7 +91,7 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	ax.set_axis_off()
 	f.add_axes(ax)
 	ax.imshow(mask_reshaped)
-	f.savefig('Mask_{}.png'.format(i))
+	f.savefig('{}/Mask_{}.png'.format(results_dir, i))
 	plt.close()
 
 stop_sc = datetime.datetime.now()
