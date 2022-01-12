@@ -79,8 +79,6 @@ model = sm.Unet(BACKBONE, classes=len(classes), activation=activation)
 model.load_weights('./weights0300.hdf5')
 
 times = []
-# overlays = []
-# masks = []
 for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes)):
 	pred_img_input = np.expand_dims(pred_img, 0)
 	test_img_input = preprocess_input(pred_img_input)
@@ -99,10 +97,6 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes
 	mask_reshaped = mask_3ch[:original_shape[0], :original_shape[1]]
 	result_reshaped = result[:original_shape[0], :original_shape[1]]
 
-	# overlays.append(result_reshaped)
-	# masks.append(mask_reshaped)
-
-# for name, img, mask in zip(img_names, overlays, masks):
 	f = plt.figure()
 	f.set_figheight(result_reshaped.shape[0] / f.get_dpi())
 	f.set_figwidth(result_reshaped.shape[1] / f.get_dpi())
@@ -122,11 +116,14 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes
 	ax.imshow(mask_reshaped)
 	f.savefig('{}/{}'.format(masks_dir, img_names[i]))
 	plt.close()
+	
 
 stop_sc = datetime.datetime.now()
+
 try:
 	print('Average prediction time for each image: {}s'.format(sum(times[1:])/len(times)))
 except:
 	print('No need of calculating average time because the number of input images is one!')
+	
 print('Execution time of this module: {}s'.format(stop_sc-start_sc))
 print('Done!')
