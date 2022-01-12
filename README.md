@@ -46,3 +46,18 @@ Examples of the CoFly-WeedDB dataset.
      <figcaption align = "center"><p align="center">
   Figure 1. Detected weeds annotated with pink color.
     </figcaption>
+
+
+## Dependencies 
+Install all the neccecary dependencies using ```pip3 install <package name>```
+
+Required packages:
+* opencv-python (version >= 4.5.3)
+* numpy (version >= 1.21.3)
+* matplotlib (version >= 3.2.2)
+* tensorflow (version >= 2.7.0)
+* keras (version == 2.7.0)
+* segmentation-models (version == 1.0.1)
+
+> Note: The versions of tensorflow, keras and segmentation-models should be compatible. 
+
