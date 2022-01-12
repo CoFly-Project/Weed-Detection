@@ -6,6 +6,13 @@
 The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the [```Problematic-Areas-Detection```](https://github.com/CoFly-Project/Problematic-Areas-Detection) module in terms of plant health and provide valuable information to the end-user. In specific, the developed module is based on the pretrained DeepLabv3+ instance was pretrained on PASCAL VOC 2012 dataset and further trained on the  [```CoFly-WeedDB```](https://github.com/CoFly-Project/CoFly-WeedDB) dataset for the weed semantic segmentation task. The developed module is capable of semantically segmenting weed instances depicted on input RGB images and thus, provides accurate information regarding the location of detected weeds.
   
   
+<p align="center">
+<img src=""/>
+<figcaption align = "center"><p align="center">
+  Figure 2. Detected weeds annotated with pink color.
+    </figcaption>
+  
+  
 ## How to run
   
 1. Clone this repo
@@ -22,11 +29,7 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
 ## Results
 
 ### Visualizations
-  
-<!-- ![ID_00048_UAV_dji phantom 4 pro hawk 1_ Lat=39 54212427861807,Lon=22 64442951302024,Alt=4 900000095367432 _DATE_03_07_2019_14_38_56](https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png)
-![ID_00050_UAV_dji phantom 4 pro hawk 1_ Lat=39 54212050531792,Lon=22 644424707209755,Alt=4 900000095367432 _DATE_03_07_2019_14_38_58](https://user-images.githubusercontent.com/80779522/148941380-d254c284-62ba-412a-9823-e0d96b3713fc.png)
-![ID_00052_UAV_dji phantom 4 pro hawk 1_ Lat=39 54211477371615,Lon=22 644417506003943,Alt=4 900000095367432 _DATE_03_07_2019_14_38_59](https://user-images.githubusercontent.com/80779522/148941430-b8d319fc-66ea-43ee-97be-d1c2bd6b6685.png) -->
-  
+    
   
 Examples of the CoFly-WeedDB dataset.
 <table class="center">
@@ -44,7 +47,7 @@ Examples of the CoFly-WeedDB dataset.
   </tr>
 </table>
      <figcaption align = "center"><p align="center">
-  Figure 1. Detected weeds annotated with pink color.
+  Figure 2. Detected weeds annotated with pink color.
     </figcaption>
 
 
