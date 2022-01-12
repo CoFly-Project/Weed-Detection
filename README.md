@@ -9,7 +9,7 @@ The main objective of the ```Weed-Detection``` module is to provide a more thoro
 <p align="center">
 <img src=""/>
 <figcaption align = "center"><p align="center">
-  Figure 2. Detected weeds annotated with pink color.
+  Figure 1. Workflow of the Weed-Detection module. The detected weeds are annotated with pink color.
     </figcaption>
   
   
@@ -29,8 +29,7 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
 ## Results
 
 ### Visualizations
-    
-  
+
 Examples of the CoFly-WeedDB dataset.
 <table class="center">
   <tr class="center">
@@ -47,7 +46,7 @@ Examples of the CoFly-WeedDB dataset.
   </tr>
 </table>
      <figcaption align = "center"><p align="center">
-  Figure 2. Detected weeds annotated with pink color.
+  Figure 2. Results from the Weed-Detection moduleDetected weeds annotated with pink color.
     </figcaption>
 
 
