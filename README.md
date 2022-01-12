@@ -7,7 +7,7 @@ The main objective of the ```Weed-Detection``` module is to provide a more thoro
   
   
 <p align="center">
-<img src=""/>
+<img src="https://user-images.githubusercontent.com/80779522/149145965-2b5b5da1-dfa5-4752-8794-e76d5f5ba16b.png"/>
 <figcaption align = "center"><p align="center">
   Figure 1. Workflow of the Weed-Detection module. The detected weeds are annotated with pink color.
     </figcaption>
@@ -33,12 +33,16 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
 Examples of the CoFly-WeedDB dataset.
 <table class="center">
   <tr class="center">
-    <td><img src="https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" =500x500 /></td>
-    <td><img src="https://user-images.githubusercontent.com/80779522/148940518-fe3bd215-745f-45cf-883e-c7d1bb921cf6.png" =500x500 /></td>
+    <td><img src="https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" =400x400 /></td>
+    <td><img src="https://user-images.githubusercontent.com/80779522/148940518-fe3bd215-745f-45cf-883e-c7d1bb921cf6.png" =400x400 /></td>
     </tr>
   <tr class="center">
-    <td><img src="https://user-images.githubusercontent.com/80779522/148941430-b8d319fc-66ea-43ee-97be-d1c2bd6b6685.png" =500x500/></td>  
-    <td><img src="https://user-images.githubusercontent.com/80779522/148940616-39bb486e-5b42-4ba6-8c24-e8d383b0ec26.png" =500x500 /></td>
+    <td><img src="https://user-images.githubusercontent.com/80779522/149146640-c12eec45-90a6-4beb-9b55-2ef135ff860d.png" =400x400 /></td>
+    <td><img src="https://user-images.githubusercontent.com/80779522/149146632-86af9d22-6f44-4095-9670-3fab7dcfc209.png" =400x400 /></td>    
+    </tr>
+  <tr class="center">
+    <td><img src="https://user-images.githubusercontent.com/80779522/148941430-b8d319fc-66ea-43ee-97be-d1c2bd6b6685.png" =400x400 /></td>
+    <td><img src="https://user-images.githubusercontent.com/80779522/148940616-39bb486e-5b42-4ba6-8c24-e8d383b0ec26.png" =400x400 /></td>
      </tr>
   <tr align="center">
     <td>(a) RGB</td>
@@ -46,9 +50,8 @@ Examples of the CoFly-WeedDB dataset.
   </tr>
 </table>
      <figcaption align = "center"><p align="center">
-  Figure 2. Results from the Weed-Detection moduleDetected weeds annotated with pink color.
+  Figure 2. Results from the Weed-Detection module with (a) RGB images as inputs and the (b) corresponding extracted annotated images. 
     </figcaption>
-
 
 ## Dependencies 
 Install all the neccecary dependencies using ```pip3 install <package name>```
