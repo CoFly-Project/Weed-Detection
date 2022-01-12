@@ -1,5 +1,3 @@
-import tensorflow as tf
-import segmentation_models as sm
 import glob
 import cv2
 import os
@@ -7,14 +5,33 @@ import numpy as np
 from matplotlib import pyplot as plt
 import datetime 
 import sys
+import argparse
+import tensorflow as tf
+import segmentation_models as sm
 from tensorflow import keras
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
-images = sys.argv[1]
-save_dir = sys.argv[2]
-results_dir = os.path.join(save_dir, 'results')
-os.makedirs(results_dir, exist_ok=True)
+parser = argparse.ArgumentParser()
+parser.add_argument('--input_folder', required=True, help="Please enter the absolute path of the folder with images.")
+parser.add_argument('--output_folder', required=True, help="Please enter the absolute path where the extracted files will be saved.")
+args = parser.parse_args()
+
+def _is_valid_directory(arg):
+    if not os.path.isdir(arg):
+        parser.error('The directory {} does not exist!'.format(arg))
+    else:
+        return arg
+
+images = args.input_folder
+save_dir = _is_valid_directory(args.output_folder)
+
+overlays_dir = os.path.join(save_dir, 'overlays')
+masks_dir = os.path.join(save_dir, 'masks')
+
+os.makedirs(overlays_dir, exist_ok=True)
+os.makedirs(masks_dir, exist_ok=True)
+
 sm.set_framework('tf.keras')
 
 extensions = ["*.png", "*.jpg", ".jpeg"]
@@ -22,8 +39,10 @@ start_sc = datetime.datetime.now()
 
 original_shapes = []
 predict_imgs = []
+img_names = []
 for ext in extensions:
 	for img_path in glob.glob(os.path.join(images, ext)):
+		img_name = os.path.basename(img_path)
 		img = cv2.imread(img_path, cv2.IMREAD_COLOR)
 		height, width, channels = img.shape
 
@@ -41,10 +60,14 @@ for ext in extensions:
 
 		result = cv2.copyMakeBorder(img, 0, int(new_height-height), 0, int(new_width-width), cv2.BORDER_CONSTANT, None, value = 0)
 		img_reshaped = cv2.cvtColor(result, cv2.COLOR_BGR2RGB) 
+
 		original_shapes.append(img.shape)
+		img_names.append(img_name)
 		predict_imgs.append(img_reshaped)
 	   
-predict_imgs_arr = np.array(predict_imgs)
+
+
+# predict_imgs_arr = np.array(predict_imgs)
 
 classes = ['weeds', 'background']
 activation = 'sigmoid' if len(classes) == 1 else 'softmax'
@@ -56,7 +79,9 @@ model = sm.Unet(BACKBONE, classes=len(classes), activation=activation)
 model.load_weights('./weights0300.hdf5')
 
 times = []
-for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_shapes)):
+# overlays = []
+# masks = []
+for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes)):
 	pred_img_input = np.expand_dims(pred_img, 0)
 	test_img_input = preprocess_input(pred_img_input)
 
@@ -74,6 +99,10 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	mask_reshaped = mask_3ch[:original_shape[0], :original_shape[1]]
 	result_reshaped = result[:original_shape[0], :original_shape[1]]
 
+	# overlays.append(result_reshaped)
+	# masks.append(mask_reshaped)
+
+# for name, img, mask in zip(img_names, overlays, masks):
 	f = plt.figure()
 	f.set_figheight(result_reshaped.shape[0] / f.get_dpi())
 	f.set_figwidth(result_reshaped.shape[1] / f.get_dpi())
@@ -81,7 +110,7 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	ax.set_axis_off()
 	f.add_axes(ax)
 	ax.imshow(result_reshaped)
-	f.savefig('{}/ID_{}.png'.format(results_dir, i))
+	f.savefig('{}/{}'.format(overlays_dir, img_names[i]))
 	plt.close()
 
 	f = plt.figure()
@@ -91,10 +120,13 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	ax.set_axis_off()
 	f.add_axes(ax)
 	ax.imshow(mask_reshaped)
-	f.savefig('{}/Mask_{}.png'.format(results_dir, i))
+	f.savefig('{}/{}'.format(masks_dir, img_names[i]))
 	plt.close()
 
 stop_sc = datetime.datetime.now()
-print('Average prediction time for each image: {}s'.format(sum(times[1:])/len(times)))
+try:
+	print('Average prediction time for each image: {}s'.format(sum(times[1:])/len(times)))
+except:
+	print('No need of calculating average time because the number of input images is one!')
 print('Execution time of this module: {}s'.format(stop_sc-start_sc))
 print('Done!')
