@@ -9,7 +9,7 @@ import datetime
 import sys
 from tensorflow import keras
 
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2" # Optional for disabling the tensorflow info and warning messages
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 def winapi_path(dos_path, encoding=None):
 	if (not isinstance(dos_path, str) and encoding is not None): 
@@ -76,10 +76,11 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	
 	mask = np.argmax(mask_unet, axis=3)[0,:,:]*255	
 	mask_3ch = np.stack((mask, )*3, axis = -1)
-	mask_3ch[mask==255] = [51, 153, 255]
-	mask_3ch = mask_3ch.astype('int8')
+	mask_3ch = mask_3ch.astype('uint8')
+	mask_3ch[mask==255] = [150, 10, 150]	
 
-	result = cv2.addWeighted(pred_img, 1, mask_3ch, 0.7, 0.7, dtype = cv2.CV_8UC2)
+	result = cv2.addWeighted(pred_img, 1, mask_3ch, 0.9, 0.7, dtype = cv2.CV_8UC3)
+	mask_reshaped = mask_3ch[:original_shape[0], :original_shape[1]]
 	result_reshaped = result[:original_shape[0], :original_shape[1]]
 
 	f = plt.figure()
@@ -90,6 +91,16 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs_arr, original_sh
 	f.add_axes(ax)
 	ax.imshow(result_reshaped)
 	f.savefig('ID_{}.png'.format(i))
+	plt.close()
+
+	f = plt.figure()
+	f.set_figheight(mask_reshaped.shape[0] / f.get_dpi())
+	f.set_figwidth(mask_reshaped.shape[1] / f.get_dpi())
+	ax = plt.Axes(f, [0., 0., 1., 1.])
+	ax.set_axis_off()
+	f.add_axes(ax)
+	ax.imshow(mask_reshaped)
+	f.savefig('Mask_{}.png'.format(i))
 	plt.close()
 
 stop_sc = datetime.datetime.now()
