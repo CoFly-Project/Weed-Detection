@@ -30,7 +30,7 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
 
 ### Visualizations
 
-Examples of the CoFly-WeedDB dataset.
+Examples of the Weed-Detection module.
 <table class="center">
   <tr class="center">
     <td><img src="https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" =400x400 /></td>
