@@ -9,7 +9,7 @@ import datetime
 import sys
 from tensorflow import keras
 
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2" # Optional for disabling the tensorflow messages
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2" # Optional for disabling the tensorflow info and warning messages
 
 def winapi_path(dos_path, encoding=None):
 	if (not isinstance(dos_path, str) and encoding is not None): 
