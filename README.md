@@ -12,11 +12,11 @@ The main objective of the ```Weed-Detection``` module is to provide a more thoro
 2. Open terminal on ~REPO_PATH
 3. Run:
 ```
-python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUTPUT_FOLDER_PATH
+python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
 ```
 **ARGUMEΝTS**
-  * ```--input_folder```:  refers to the path of the folder where the images are stored
-  * ```--output_folder```: refers to the path where extracted annotated images will be saved
+  * ```~INPUT_FOLDER_PATH```:  refers to the path of the folder where the images are stored
+  * ```~OUTPUT_FOLDER_PATH```: refers to the path where extracted annotated images will be saved
   
 
 ## Results
