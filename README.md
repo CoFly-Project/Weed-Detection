@@ -26,17 +26,6 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
   * ```~OUTPUT_FOLDER_PATH```: refers to the path where extracted annotated images will be saved
   
 ## Results
-  
-<!--  ![ID_2](https://user-images.githubusercontent.com/80779522/149176209-390166f1-ef29-49bc-ac6a-c15d86ce1671.png)
-![ID_3](https://user-images.githubusercontent.com/80779522/149176256-1d50e03d-8b67-4762-90d5-6059eb915c63.png)
-![Mask_0](https://user-images.githubusercontent.com/80779522/149176316-31dea9dc-f404-450a-9571-737c9bf688f8.png)
-![Mask_1](https://user-images.githubusercontent.com/80779522/149176321-5af200eb-910e-4e21-bcc2-a2496fb63813.png)
-![Mask_2](https://user-images.githubusercontent.com/80779522/149176324-1d0218ad-a784-46e9-aaf6-4eb1ec656d48.png)
-![Mask_3](https://user-images.githubusercontent.com/80779522/149176329-8b5f8165-64a9-4172-abef-3630884d875d.png)
-![ID_0](https://user-images.githubusercontent.com/80779522/149176331-4fbe5d4c-07f4-42b9-a7ef-69b31194abae.png)
-![ID_1](https://user-images.githubusercontent.com/80779522/149176398-62a1f5e9-42ea-40b7-b49e-f983dfd3b33e.png) -->
-
-
 ### Visualizations  
   <table class="center">
    <tr class="center">
