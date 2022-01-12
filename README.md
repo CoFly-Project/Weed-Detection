@@ -41,7 +41,7 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
   <table class="center">
    <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149173366-f44434ec-432c-4cf0-9c8b-8ead8a906671.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149173384-6b77ede1-7ba0-46ba-b2d7-b88faa354ed1.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149173384-6b77ede1-7ba0-46ba-b2d7-b88faa354ed1.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176331-4fbe5d4c-07f4-42b9-a7ef-69b31194abae.png" align="center" /></td> 
    </tr>
