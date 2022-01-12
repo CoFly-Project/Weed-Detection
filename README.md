@@ -99,6 +99,7 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
 Install all the neccecary dependencies using ```pip3 install <package name>```
 
 Required packages:
+* argparse (version >= 1.1)
 * opencv-python (version >= 4.5.3)
 * numpy (version >= 1.19.5)
 * matplotlib (version >= 3.2.2)
