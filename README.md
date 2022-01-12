@@ -46,19 +46,19 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176331-4fbe5d4c-07f4-42b9-a7ef-69b31194abae.png" align="center" /></td> 
    </tr>
     <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149163723-cc0b5cc6-d47f-426d-8c09-034d9191bb57.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149164019-5fec6f1a-20dc-42af-9d27-cc8469c2c0ec.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149173382-e778d023-7a0f-4fe4-b8e6-b555c5560e46.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176321-5af200eb-910e-4e21-bcc2-a2496fb63813.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176398-62a1f5e9-42ea-40b7-b49e-f983dfd3b33e.png" align="center" /></td> 
    </tr> 
     <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149163873-6a608eb5-7cb1-425f-8e7b-2fec86e48cfe.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149163723-cc0b5cc6-d47f-426d-8c09-034d9191bb57.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149173373-3eee23c9-da9d-4290-887f-4d7645f35c41.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176324-1d0218ad-a784-46e9-aaf6-4eb1ec656d48.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176209-390166f1-ef29-49bc-ac6a-c15d86ce1671.png" align="center" /></td> 
    </tr>
     <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149164019-5fec6f1a-20dc-42af-9d27-cc8469c2c0ec.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149163873-6a608eb5-7cb1-425f-8e7b-2fec86e48cfe.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149173366-f44434ec-432c-4cf0-9c8b-8ead8a906671.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176329-8b5f8165-64a9-4172-abef-3630884d875d.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149176256-1d50e03d-8b67-4762-90d5-6059eb915c63.png" align="center" /></td> 
