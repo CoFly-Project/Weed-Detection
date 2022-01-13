@@ -24,7 +24,7 @@ python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUT
 **ARGUMEΝTS**
   * ```--input_folder```:  refers to the path of the folder where the images are stored
   * ```--output_folder```: refers to the path where the annotated images and the corresponding masks will be saved
-  
+
 ## Results
   
 ### Visualizations  
@@ -37,25 +37,25 @@ python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUT
    </tr>
     <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201791-2628f904-27fb-4a46-8bc4-6e88a4ad7e95.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201786-08536b5a-9d2b-4e10-ba8a-00aca60fa28f.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149311595-08609b1b-83ab-4ef3-be98-d64873242a88.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202191-0fccd089-e610-4271-9154-55444fe58279.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202065-e13630bb-2a8e-4aaf-8832-2da1f079407e.png" align="center" /></td> 
    </tr> 
     <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202267-3c24a3dd-97d3-439b-b647-142bd64278a8.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149202265-f79164df-49eb-464a-9370-461d37474a84.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149311596-3b3a07ee-5609-4bb3-a2a2-f60db81332a1.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202190-9fb88165-98e1-45e8-90f6-77e5c1ba55dd.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202002-d49ab489-83a5-4ea7-98f0-90c9c7e7835b.png" align="center" /></td> 
    </tr>
     <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201857-eeb19a19-14e9-4dae-b3c6-0ed8886677a3.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201854-b387c9b3-35db-4645-8483-06d65ec95614.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149311597-77d50ed9-02bf-4076-980c-ae1b2c5ff47e.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202195-9c0614c3-606d-402e-a84b-d389dbf35619.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202098-b8eda456-4f4a-4ffa-ad88-8412dc38d47a.png" align="center" /></td> 
    </tr>
    <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201901-e90286db-6277-4220-b236-0587ff1ac385.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201897-f55fb198-6a73-4aa8-b2ef-aba620d81695.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149311593-6e4f6cea-56fa-419d-a1a7-832e6829af4f.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202196-e54ae7a6-cc51-46f7-bc3e-7b38511b4dc3.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202140-b268fc66-b533-4a92-a9d2-380baface177.png" align="center" /></td> 
    </tr> 
