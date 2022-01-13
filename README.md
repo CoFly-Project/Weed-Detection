@@ -23,7 +23,7 @@ python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUT
 ```
 **ARGUMEΝTS**
   * ```--input_folder```:  refers to the path of the folder where the images are stored
-  * ```--output_folder```: refers to the path where extracted annotated images will be saved
+  * ```--output_folder```: refers to the path where the annotated images and the corresponding masks will be saved
   
 ## Results
   
