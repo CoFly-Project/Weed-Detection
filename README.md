@@ -7,7 +7,7 @@ The main objective of the ```Weed-Detection``` module is to provide a more thoro
   
   
 <p align="center">
-<img src="https://user-images.githubusercontent.com/80779522/149206485-4439421e-8c27-4ff9-b180-d8170f743de8.png"/>
+<img src="https://user-images.githubusercontent.com/80779522/149305858-3b9a42d4-9e88-4351-a160-c6a61ff8fe55.png"/>
 <figcaption align = "center"><p align="center">
   Figure 1. Workflow of the Weed-Detection module. The detected weeds are annotated with pink color.
     </figcaption>
