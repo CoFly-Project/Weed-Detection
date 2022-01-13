@@ -3,7 +3,13 @@
 
 # Weed-Detection
   
-The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the [```Problematic-Areas-Detection```](https://github.com/CoFly-Project/Problematic-Areas-Detection) module in terms of plant health and provide valuable information to the end-user. In specific, the developed module is based on the pretrained DeepLabv3+ instance was pretrained on PASCAL VOC 2012 dataset and further trained on the  [```CoFly-WeedDB```](https://github.com/CoFly-Project/CoFly-WeedDB) dataset for the weed semantic segmentation task. The developed module is capable of semantically segmenting weed instances depicted on input RGB images and thus, provides accurate information regarding the location of detected weeds.
+The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the [```Problematic-Areas-Detection```](https://github.com/CoFly-Project/Problematic-Areas-Detection) module in terms of plant health and provide valuable information to the end-user. In specific, the developed module is based on the pretrained [DeepLabv3+](https://github.com/qubvel/segmentation_models) instance was pretrained on PASCAL VOC 2012 dataset and further trained on the  [```CoFly-WeedDB```](https://github.com/CoFly-Project/CoFly-WeedDB) dataset for the weed semantic segmentation task. The developed module is capable of semantically segmenting weed instances depicted on input RGB images and thus, provides accurate information regarding the location of detected weeds. In Figure 1 an overview of the Weeds-Detection module.
+  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/80779522/149305858-3b9a42d4-9e88-4351-a160-c6a61ff8fe55.png"/>
+<figcaption align = "center"><p align="center">
+  Figure 1. Workflow of the Weed-Detection module. The detected weeds are annotated with pink color.
+    </figcaption>
   
 Concerning about the training and evaluation of the detector, the developed dataset ([```CoFly-WeedDB```](https://github.com/CoFly-Project/CoFly-WeedDB)) was split to a training (80%) and a testing (20%) set where depicted weed clusters are labeled as “*weed*” while the rest of the image is annotated as “*background*”. The splitting process was repeated 3 times aiming to create subsets with different class distribution in order to conduct a more thorough evaluation of the employed detector. Also:
 * The model was trained for *500 epochs* with a *batch size of 12*
@@ -11,7 +17,7 @@ Concerning about the training and evaluation of the detector, the developed data
 * In order to tackle the imbalance issue among the dataset classes, *focal loss* was employed
 * *Data augmentation techniques* were utilized to enhance the generalization ability of the model. In specific, every input image of the training set was horizontally/vertical flipped and randomly resized in a scale between 0.5 to 1.5 times of the initial size with a chance of 50%
   
-In Table 1, we present the results of the detector per split and in Figure 1 an overview of the Weeds-Detection module.
+In Table 1, we present the results of the detector per split and 
   
 <div align="center">
   
@@ -24,12 +30,92 @@ Split 3|96.62|43.96|70.29
 </figure>
 </div>
 
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/80779522/149305858-3b9a42d4-9e88-4351-a160-c6a61ff8fe55.png"/>
+<table class="center">
+   <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+    <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+    <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+  <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+  <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+  <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+  <tr class="center">
+    <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
+   </tr>
+   </table>
 <figcaption align = "center"><p align="center">
-  Figure 1. Workflow of the Weed-Detection module. The detected weeds are annotated with pink color.
-    </figcaption>
+  Figure 2. Samples images of testing set.
+    </figcaption>  
+  
+
   
   
 ## How to run
@@ -89,7 +175,6 @@ python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUT
  
   <figcaption align = "center"><p align="center">
   Figure 2. Results from the Weed-Detection module.
-<!--   with (a) RGB images as inputs (b) the ground truths and the corresponding (c) predicted masks and (d) overlays as extracted.   The ground truths have been extracted by agronomists, as mentioned in  CoFly-WeeDB repository. -->
     </figcaption>
 
 ## Dependencies 
