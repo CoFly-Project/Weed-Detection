@@ -6,10 +6,10 @@
 The main objective of the ```Weed-Detection``` module is to provide a more thorough inspection on problematic areas, as have been extracted from the [```Problematic-Areas-Detection```](https://github.com/CoFly-Project/Problematic-Areas-Detection) module in terms of plant health and provide valuable information to the end-user. In specific, the developed module is based on the pretrained DeepLabv3+ instance was pretrained on PASCAL VOC 2012 dataset and further trained on the  [```CoFly-WeedDB```](https://github.com/CoFly-Project/CoFly-WeedDB) dataset for the weed semantic segmentation task. The developed module is capable of semantically segmenting weed instances depicted on input RGB images and thus, provides accurate information regarding the location of detected weeds.
   
 Concerning about the training and evaluation of the detector, the developed dataset ([```CoFly-WeedDB```](https://github.com/CoFly-Project/CoFly-WeedDB)) was split to a training (80%) and a testing (20%) set where depicted weed clusters are labeled as “*weed*” while the rest of the image is annotated as “*background*”. The splitting process was repeated 3 times aiming to create subsets with different class distribution in order to conduct a more thorough evaluation of the employed detector. Also:
-* The model was trained for *500 epochs* with a *batch size of 12*. 
-* As an optimization algorithm, *Adam solver* with a *learning rate equal to 10−3* was selected.
-* In order to tackle the imbalance issue among the dataset classes, *focal loss* was employed. 
-* *Data augmentation techniques* were utilized to enhance the generalization ability of the model. In specific, every input image of the training set was horizontally/vertical flipped and randomly resized in a scale between 0.5 to 1.5 times of the initial size with a chance of 50%. 
+* The model was trained for *500 epochs* with a *batch size of 12*
+* As an optimization algorithm, *Adam solver* with a *learning rate equal to 10−3* was selected
+* In order to tackle the imbalance issue among the dataset classes, *focal loss* was employed
+* *Data augmentation techniques* were utilized to enhance the generalization ability of the model. In specific, every input image of the training set was horizontally/vertical flipped and randomly resized in a scale between 0.5 to 1.5 times of the initial size with a chance of 50%
   
 In Table 1, we present the results of the detector per split and in Figure 1 an overview of the Weeds-Detection module.
   
