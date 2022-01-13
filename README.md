@@ -69,7 +69,8 @@ python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUT
  </table>
  
   <figcaption align = "center"><p align="center">
-  Figure 2. Results from the Weed-Detection module with (a) RGB images as inputs (b) the ground truths and the corresponding (c) predicted masks and (d) overlays as extracted.   The ground truths have been extracted by agronomists, as mentioned in  CoFly-WeeDB repository.
+  Figure 2. Results from the Weed-Detection module.
+<!--   with (a) RGB images as inputs (b) the ground truths and the corresponding (c) predicted masks and (d) overlays as extracted.   The ground truths have been extracted by agronomists, as mentioned in  CoFly-WeeDB repository. -->
     </figcaption>
 
 ## Dependencies 
