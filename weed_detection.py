@@ -25,7 +25,7 @@ results_dir = os.path.join(save_dir, 'results')
 os.makedirs(results_dir, exist_ok=True)
 sm.set_framework('tf.keras')
 
-extensions = ["*.png", "*.jpg", ".jpeg"]
+extensions = ["*.png", "*.jpg", "*.jpeg"]
 start_sc = datetime.datetime.now()
 
 original_shapes = []
