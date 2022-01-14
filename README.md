@@ -93,10 +93,10 @@ python3 weed_detection.py --input_folder ~INPUT_FOLDER_PATH --output_folder ~OUT
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
    </tr>
     <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201791-2628f904-27fb-4a46-8bc4-6e88a4ad7e95.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149324542-0752b92b-b1e8-4459-b656-0771a21b4753.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149202191-0fccd089-e610-4271-9154-55444fe58279.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149202065-e13630bb-2a8e-4aaf-8832-2da1f079407e.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149515973-5fbf6dd8-5383-4a03-924b-b24a935de5fc.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149518612-27d5eac2-acec-49c3-a769-3412788b9a5a.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149515662-03f7a34a-0398-4ebf-b4a0-6a061cd6cc7a.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149515759-24be4d2e-a3b9-4d4f-9ba0-0256d069641e.png" align="center" /></td> 
    </tr> 
     <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202267-3c24a3dd-97d3-439b-b647-142bd64278a8.png" align="center" /></td>
