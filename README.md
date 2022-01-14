@@ -27,39 +27,38 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
   
 ## Results
   
-### Visualizations  
+### Visualizations   
   <table class="center">
    <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/148941318-6922edc4-a11e-47f7-8feb-71659367fe80.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149173384-6b77ede1-7ba0-46ba-b2d7-b88faa354ed1.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149325086-f561b75f-51f2-4624-88fb-6649e9a740ac.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202187-d4f62556-a42a-4bf3-a601-826848c9b23c.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201959-c48a2f4f-c074-4b09-a286-2d6dbf4a9276.png" align="center" /></td> 
    </tr>
     <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201791-2628f904-27fb-4a46-8bc4-6e88a4ad7e95.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201786-08536b5a-9d2b-4e10-ba8a-00aca60fa28f.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149202191-0fccd089-e610-4271-9154-55444fe58279.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149202065-e13630bb-2a8e-4aaf-8832-2da1f079407e.png" align="center" /></td> 
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149515973-5fbf6dd8-5383-4a03-924b-b24a935de5fc.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149518612-27d5eac2-acec-49c3-a769-3412788b9a5a.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149515662-03f7a34a-0398-4ebf-b4a0-6a061cd6cc7a.png" align="center" /></td>  
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149515759-24be4d2e-a3b9-4d4f-9ba0-0256d069641e.png" align="center" /></td> 
    </tr> 
     <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202267-3c24a3dd-97d3-439b-b647-142bd64278a8.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149202265-f79164df-49eb-464a-9370-461d37474a84.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149324545-a39c8edd-3c8b-4298-9c8b-b17278270c7a.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202190-9fb88165-98e1-45e8-90f6-77e5c1ba55dd.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202002-d49ab489-83a5-4ea7-98f0-90c9c7e7835b.png" align="center" /></td> 
    </tr>
     <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201857-eeb19a19-14e9-4dae-b3c6-0ed8886677a3.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201854-b387c9b3-35db-4645-8483-06d65ec95614.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149324548-6b5a1ef2-cfd7-488b-8292-fd372453f015.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202195-9c0614c3-606d-402e-a84b-d389dbf35619.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202098-b8eda456-4f4a-4ffa-ad88-8412dc38d47a.png" align="center" /></td> 
    </tr>
    <tr class="center">
     <td><img src= "https://user-images.githubusercontent.com/80779522/149201901-e90286db-6277-4220-b236-0587ff1ac385.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149201897-f55fb198-6a73-4aa8-b2ef-aba620d81695.png" align="center" /></td>
+    <td><img src= "https://user-images.githubusercontent.com/80779522/149324538-eb4238c9-f20e-45ab-a843-5295e13de105.png" align="center" /></td>
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202196-e54ae7a6-cc51-46f7-bc3e-7b38511b4dc3.png" align="center" /></td>  
     <td><img src= "https://user-images.githubusercontent.com/80779522/149202140-b268fc66-b533-4a92-a9d2-380baface177.png" align="center" /></td> 
    </tr> 
- 
    <tr align="center">
     <td>(a) Input RGB image</td>
     <td>(b) Ground truth</td>
@@ -69,7 +68,7 @@ python3 weed_detection.py ~INPUT_FOLDER_PATH ~OUTPUT_FOLDER_PATH
  </table>
  
   <figcaption align = "center"><p align="center">
-  Figure 2. Results from the Weed-Detection module with (a) RGB images as inputs (b) the ground truths and the corresponding (c) predicted masks and (d) overlays as extracted.   The ground truths have been extracted by agronomists, as mentioned in  CoFly-WeeDB repository.
+  Figure 2. Results from the Weed-Detection module.
     </figcaption>
 
 ## Dependencies 
