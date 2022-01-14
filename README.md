@@ -70,52 +70,6 @@ Split 3|96.62|43.96|70.29
 ![ID_00183_UAV_dji phantom 4 pro hawk 1_ Lat=39 542451006911875,Lon=22 644911984033477,Alt=4 900000095367432 _DATE_03_07_2019_14_43_02](https://user-images.githubusercontent.com/80779522/149368312-ff83edc1-65ac-495d-b496-654758173240.png)
 ![ID_00187_UAV_dji phantom 4 pro hawk 1_ Lat=39 54261113579653,Lon=22 64486757250199,Alt=5 0 _DATE_03_07_2019_14_43_12](https://user-images.githubusercontent.com/80779522/149368319-b924ee6c-0187-40f7-8edb-ec3ab197a32c.png) -->
 
-
-
-<table class="center">
-    <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149367627-2c1f4e1b-3eeb-4a38-89db-a786460b1a95.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368361-3558e68c-b6ad-4b8f-8b2e-be15965b24c3.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368347-32a105db-569f-4a05-b2a6-8cf92225349f.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368342-7ca5a199-380e-4f8d-853e-f6e2bfeba267.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368337-9877ccb8-cd25-4104-83c4-b85750c90ad2.png" align="center" /></td> 
-      </tr>
-    <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368332-57330c45-a921-44a9-a236-9564b7a73349.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368329-515ae162-facd-4c30-8680-9f7eb3400fa5.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368327-c2ba3487-dd3b-4ed3-8b8e-ce531b6cc07e.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368323-0787ee02-3d97-4e44-80af-3925967cbef7.png" align="center" /></td> 
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368507-78f41e77-83bc-432b-8669-fee734d4fca2.png" align="center" /></td>
-       </tr>
-  <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368503-fc735baf-a0cb-44d2-bfaa-c2611c3a4ad9.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368501-9785bad9-26e8-4da5-8c28-e44889b7bda7.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368496-0781dc80-90a2-46f4-ad95-8112e06c09a3.png" align="center" /></td> 
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368485-3df0c3eb-851f-4efd-b4eb-453329862ac7.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368453-f9592cf2-6e2b-4723-ae34-36f348bf76dd.png" align="center" /></td>
-     </tr>
-    <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368421-702f6094-fd7c-4074-a536-50ad98bcbd5a.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368395-547bcb21-25fa-4eec-b567-0216619a6eb6.png" align="center" /></td> 
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368681-af7005df-53c3-427c-a9fa-09340593e28f.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368645-0e7e1f9b-dc80-4a8e-9375-c79cd0d8d57a.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368615-27853822-deae-4954-a23d-b781c4559c17.png" align="center" /></td>  
-       </tr>
-    <tr class="center">
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368586-54aadd7f-829a-4e43-a026-eb3d347fe332.png" align="center" /></td> 
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368553-ce120276-1a30-486d-8d12-f1f337e72041.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368519-ff0c6b1a-c18f-4a09-bb8a-ba24cb256f53.png" align="center" /></td>
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368512-ba101685-6e8d-4ff1-b22c-2d2f77661aa0.png" align="center" /></td>  
-    <td><img src= "https://user-images.githubusercontent.com/80779522/149368511-9d099def-cece-4b65-8acd-9784e52b33e9.png" align="center" /></td> 
-   </tr>
-   </table>
-<figcaption align = "center"><p align="center">
-  Figure 2. Samples of CoFly-WeedDB dataset.
-    </figcaption>  
-  
-
-  
-  
 ## How to run
   
 1. Clone this repo
