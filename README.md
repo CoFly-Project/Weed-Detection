@@ -17,7 +17,7 @@ Concerning about the training and evaluation of the detector, the developed data
 * In order to tackle the imbalance issue among the dataset classes, *focal loss* was employed
 * *Data augmentation techniques* were utilized to enhance the generalization ability of the model. In specific, every input image of the training set was horizontally/vertical flipped and randomly resized in a scale between 0.5 to 1.5 times of the initial size with a chance of 50%
   
-In Table 1, we present the results of the detector per split and 
+In Table 1, we present the results of the detector per split.
   
 <div align="center">
   
