@@ -110,7 +110,7 @@ Split 3|96.62|43.96|70.29
    </tr>
    </table>
 <figcaption align = "center"><p align="center">
-  Figure 2. Samples images of testing set.
+  Figure 2. Samples of CoFly-WeedDB dataset.
     </figcaption>  
   
 
