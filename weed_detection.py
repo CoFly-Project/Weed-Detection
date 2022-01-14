@@ -55,7 +55,7 @@ for ext in extensions:
 		info.append([os.path.basename(img_path), img.shape])
 		predict_imgs.append(img_reshaped)
 	   
-predict_imgs_arr = np.array(predict_imgs, dtype = 'object')
+predict_imgs_arr = np.array(predict_imgs)
 
 classes = ['weeds', 'background']
 activation = 'sigmoid' if len(classes) == 1 else 'softmax'
@@ -83,6 +83,7 @@ for i, (pred_img, img_specs) in enumerate(zip(predict_imgs_arr, info)):
 	mask_3ch[mask==255] = [150, 10, 150]	
 
 	result = cv2.addWeighted(pred_img, 1, mask_3ch, 0.9, 0.7, dtype = cv2.CV_8UC3)
+
 	mask_reshaped = mask_3ch[:img_specs[1][0], :img_specs[1][1]]
 	result_reshaped = result[:img_specs[1][0], :img_specs[1][1]]
 
