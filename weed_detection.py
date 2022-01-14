@@ -78,7 +78,7 @@ model = sm.Unet(BACKBONE, classes=len(classes), activation=activation)
 model.load_weights('./weights0300.hdf5')
 
 times = []
-for i, (pred_img, img_specs) in enumerate(zip(predict_imgs_arr, info)):
+for pred_img, img_specs in zip(predict_imgs_arr, info):
 	pred_img_input = np.expand_dims(pred_img, 0)
 	test_img_input = preprocess_input(pred_img_input)
 
