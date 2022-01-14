@@ -1,16 +1,19 @@
+import datetime 
+start_sc = datetime.datetime.now()
+
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+
 import glob
 import cv2
-import os
 import numpy as np
 from matplotlib import pyplot as plt
-import datetime 
 import sys
 import argparse
 import tensorflow as tf
 import segmentation_models as sm
 from tensorflow import keras
 
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_folder', required=True, help="Please enter the absolute path of the folder with images.")
@@ -35,11 +38,9 @@ os.makedirs(masks_dir, exist_ok=True)
 sm.set_framework('tf.keras')
 
 extensions = ["*.png", "*.jpg", ".jpeg"]
-start_sc = datetime.datetime.now()
 
-original_shapes = []
 predict_imgs = []
-img_names = []
+info = []
 for ext in extensions:
 	for img_path in glob.glob(os.path.join(images, ext)):
 		img_name = os.path.basename(img_path)
@@ -61,13 +62,11 @@ for ext in extensions:
 		result = cv2.copyMakeBorder(img, 0, int(new_height-height), 0, int(new_width-width), cv2.BORDER_CONSTANT, None, value = 0)
 		img_reshaped = cv2.cvtColor(result, cv2.COLOR_BGR2RGB) 
 
-		original_shapes.append(img.shape)
-		img_names.append(img_name)
+		info.append([os.path.basename(img_path), img.shape])
 		predict_imgs.append(img_reshaped)
 	   
 
-
-# predict_imgs_arr = np.array(predict_imgs)
+predict_imgs_arr = np.array(predict_imgs)
 
 classes = ['weeds', 'background']
 activation = 'sigmoid' if len(classes) == 1 else 'softmax'
@@ -79,7 +78,7 @@ model = sm.Unet(BACKBONE, classes=len(classes), activation=activation)
 model.load_weights('./weights0300.hdf5')
 
 times = []
-for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes)):
+for i, (pred_img, img_specs) in enumerate(zip(predict_imgs_arr, info)):
 	pred_img_input = np.expand_dims(pred_img, 0)
 	test_img_input = preprocess_input(pred_img_input)
 
@@ -94,8 +93,8 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes
 	mask_3ch[mask==255] = [150, 10, 150]	
 
 	result = cv2.addWeighted(pred_img, 1, mask_3ch, 0.9, 0.7, dtype = cv2.CV_8UC3)
-	mask_reshaped = mask_3ch[:original_shape[0], :original_shape[1]]
-	result_reshaped = result[:original_shape[0], :original_shape[1]]
+	mask_reshaped = mask_3ch[:img_specs[1][0], :img_specs[1][1]]
+	result_reshaped = result[:img_specs[1][0], :img_specs[1][1]]
 
 	f = plt.figure()
 	f.set_figheight(result_reshaped.shape[0] / f.get_dpi())
@@ -104,7 +103,7 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes
 	ax.set_axis_off()
 	f.add_axes(ax)
 	ax.imshow(result_reshaped)
-	f.savefig('{}/{}'.format(overlays_dir, img_names[i]))
+	f.savefig('{}/{}'.format(overlays_dir, img_specs[0]))
 	plt.close()
 
 	f = plt.figure()
@@ -114,16 +113,14 @@ for i, (pred_img, original_shape) in enumerate(zip(predict_imgs, original_shapes
 	ax.set_axis_off()
 	f.add_axes(ax)
 	ax.imshow(mask_reshaped)
-	f.savefig('{}/{}'.format(masks_dir, img_names[i]))
+	f.savefig('{}/{}'.format(masks_dir, img_specs[0]))
 	plt.close()
-	
-
-stop_sc = datetime.datetime.now()
 
 try:
-	print('Average prediction time for each image: {}s'.format(sum(times[1:])/len(times)))
+	print('Average prediction time for each image: {}s'.format(sum(times[1:])/len(times[1:])))
 except:
 	print('No need of calculating average time because the number of input images is one!')
-	
+
+stop_sc = datetime.datetime.now()
 print('Execution time of this module: {}s'.format(stop_sc-start_sc))
 print('Done!')
